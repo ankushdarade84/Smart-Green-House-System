@@ -1,0 +1,89 @@
+; This file describes rules for package and pin translation from Proteus to realPCB
+; All packages within ISIS are in Proteus ARES format
+; This file translates to best suitable part in realPCB
+; You can swap pins over via the fourth column, "proteus_pin_name = realpcb_pin_name"
+
+DATA PACKAGE    : REALPCB_LIBRARY, REALPCB_PACKAGE, REALPCB_PINS
+
+CONN-SIL2       : "Connectors.cml", "Header (2 pole)",    [SKIP]
+CONN-SIL3       : "Connectors.cml", "Header (3 pole)",    [SKIP]   
+CONN-SIL4       : "Connectors.cml", "Header (4 pole)",    [SKIP]     
+CONN-SIL5       : "Connectors.cml", "Header (5 pole)",    [SKIP]   
+CONN-SIL6       : "PCB Footprints.cml", "06SIL",    [SKIP]                 
+CONN-SIL8       : "PCB Footprints.cml", "08SIL",    [SKIP]      
+CONN-SIL9       : "PCB Footprints.cml", "09SIL",    [SKIP]      
+CONN-SIL10      : "Connectors.cml", "Header (10 pole)",    [SKIP]  
+DIL04           : "PCB Footprints.cml", "04DIL",    [SKIP]      
+DIL06           : "PCB Footprints.cml", "06DIL",    [SKIP]      
+DIL08           : "PCB Footprints.cml", "08DIL",    [SKIP]      
+DIL14           : "PCB Footprints.cml", "14DIL",    [SKIP]      
+DIL16           : "PCB Footprints.cml", "16DIL",    [SKIP]      
+DIL18           : "PCB Footprints.cml", "18DIL",    [SKIP]
+DIL20           : "PCB Footprints.cml", "20DIL",    [SKIP]     
+DIL22           : "PCB Footprints.cml", "22DIL",    [SKIP]      
+DIL24           : "PCB Footprints.cml", "24DIL (wide)", 	[SKIP]
+DIL24NAR        : "PCB Footprints.cml", "24DIL (narrow)",   	[SKIP]      
+DIL28           : "PCB Footprints.cml", "28DIL (wide)",    	[SKIP]       
+DIL28NAR        : "PCB Footprints.cml", "28DIL (narrow)",   	[SKIP]      
+DIL40           : "PCB Footprints.cml", "40DIL",    [SKIP]      
+DIL64           : "PCB Footprints.cml", "64DIL",    [SKIP]      
+LED             : "Light Outputs.cml",  "LED (white 5mm)",      	"A=2,K=1"
+LDR             : "Input Components.cml",  "LDR (miniature)",   [SKIP]
+TO3             : "PCB Footprints.cml", "TO3",      [SKIP]        
+TO18            : "PCB Footprints.cml", "TO18",     [SKIP]      
+TO39            : "PCB Footprints.cml", "TO39",     [SKIP]
+TO5             : "PCB Footprints.cml", "TO39",     [SKIP]
+TO92            : "PCB Footprints.cml", "TO92",     [SKIP]      
+ELINE           : "PCB Footprints.cml", "TO92",     "1=3,2=2,3=1" 
+TO92-2          : "PCB Footprints.cml", "TO92A",    [SKIP]             
+TO92-100        : "PCB Footprints.cml", "TO92",    [SKIP]      
+TO220           : "PCB Footprints.cml", "TO220",    [SKIP]
+P1              : "PCB Footprints.cml", "TO220",    [SKIP]
+RES40           : "Passive Components.cml", "Resistor", 	[SKIP]
+DIODE25         : "Discrete Semiconductors.cml", "1N4148 Diode",    "A=1,K=2"
+DIODE30         : "Discrete Semiconductors.cml", "1N4001 Diode",    "A=1,K=2"
+DIODE40         : "Discrete Semiconductors.cml", "1N4001 Diode",    "A=1,K=2"
+DO35            : "Discrete Semiconductors.cml", "1N4001 Diode",    "A=1,K=2"
+DO35            : "Discrete Semiconductors.cml", "1N4148 Diode",    "A=1,K=2"
+DO41            : "Discrete Semiconductors.cml", "Zener Diode",    "A=1,K=2"
+CONN-DIL14      : "PCB Footprints.cml", "14DIL",    [SKIP]      
+7SEG-56         : "Light Outputs.cml", "7 Seg LED(CA)",    "E1=1,D1=2,CA1=3,C1=4,DP1=5,B1=6,A1=7,F1=9,G1=10"
+PICAXE-SOCKET   : "Microcontrollers.cml",  "PICAXE Download Socket",      	[SKIP]
+RESONATOR       : "Microcontrollers.cml",  "Resonator",      	[SKIP]
+XTAL18          : "Microcontrollers.cml",  "Resonator",         "1=1,2=3"
+BUTTON          : "Switches.cml",  "SPST Switch (6mm PCB)",     "1=1,2=3"
+BATTERY         : "Connectors.cml",  "Battery",     [SKIP]
+TBLOCK-M2       : "Connectors.cml",  "Terminal Block (5mm-2pole)",     [SKIP]
+TBLOCK-M3       : "Connectors.cml",  "Terminal Block (5mm-3pole)",     [SKIP]
+TBLOCK-M4       : "Connectors.cml",  "Terminal Block (5mm-4pole)",     [SKIP]
+TBLOCK-M6       : "Connectors.cml",  "Terminal Block (5mm-6pole)",     [SKIP]
+ELEC-RAD10      : "Passive Components.cml", "Electrolytic Capacitor",            "+=1,-=2"
+ELEC-RAD13      : "Passive Components.cml", "Electrolytic Capacitor",            "+=1,-=2"
+ELEC-RAD20      : "Passive Components.cml", "Electrolytic Capacitor (large)",    "+=1,-=2"
+ELEC-RAD25      : "Passive Components.cml", "Electrolytic Capacitor (large)",    "+=1,-=2"
+ELEC-RAD30      : "Passive Components.cml", "Electrolytic Capacitor (xl)",       "+=1,-=2"
+ELEC-RAD40      : "Passive Components.cml", "Electrolytic Capacitor (xl)",       "+=1,-=2"
+ELEC-AX45       : "Passive Components.cml", "Electrolytic Cap Axial",            "+=1,-=2"
+ELEC-AX50       : "Passive Components.cml", "Electrolytic Cap Axial",            "+=1,-=2"
+ELEC-AX60       : "Passive Components.cml", "Electrolytic Cap Axial (large)",    "+=1,-=2"
+ELEC-AX80       : "Passive Components.cml", "Electrolytic Cap Axial (large)",    "+=1,-=2" 
+ELEC-AX100      : "Passive Components.cml", "Electrolytic Cap Axial (xl)",       "+=1,-=2"
+ELEC-AX120      : "Passive Components.cml", "Electrolytic Cap Axial (xl)",       "+=1,-=2"
+ELEC-AX130      : "Passive Components.cml", "Electrolytic Cap Axial (xl)",       "+=1,-=2"
+ELEC-AX140      : "Passive Components.cml", "Electrolytic Cap Axial (xl)",       "+=1,-=2"
+ELEC-AX160      : "Passive Components.cml", "Electrolytic Cap Axial (xl)",       "+=1,-=2"
+ELEC-AX180      : "Passive Components.cml", "Electrolytic Cap Axial (xl)",       "+=1,-=2"
+CAP10           : "Passive Components.cml", "Capacitor (ceramic)",       "+=1,-=2"
+CAP-RAD10       : "Passive Components.cml", "Capacitor (ceramic)",       "+=1,-=2"
+CAP20           : "Passive Components.cml", "Capacitor (polyester)",     "+=1,-=2"
+CAP-RAD20       : "Passive Components.cml", "Capacitor (polyester)",     "+=1,-=2"
+PRE-HMIN        : "Input Components.cml",  "Variable Resistor (preset)",     [SKIP]
+RLY-NTE-C       : "Switches.cml",  "DPDT Relay (5V Finder)",     "C1=7,C2=8,COM2=1,NC2=2,NO2=3"
+DPDT            : "Switches.cml",  "DPDT Switch (Leads)",     [SKIP]
+DPST            : "Switches.cml",  "DPST Switch (Leads)",     [SKIP]
+
+END
+
+
+
+
